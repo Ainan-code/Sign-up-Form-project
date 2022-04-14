@@ -6,6 +6,12 @@
  
 
 }
+body {
+  min-width: 100vh;
+  background-image: url(./images/ayumi-kubo-mF2iY6pKa-8-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 #main {
   display: grid;
@@ -15,15 +21,20 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 15px;
+  background-color: white;
+  height: 100vh;
+ 
+  
   
 }
 .sidebar {
-  background: url(./images/ayumi-kubo-mF2iY6pKa-8-unsplash.jpg) repeat-y;
+  
   margin-bottom: 0;
-  min-width: 100vh;
+  max-width: 40vh;
   
 }
 
@@ -44,23 +55,59 @@
  text-align: center;
  font-weight: bold;
  background-color: aliceblue;
+ padding: 20px;
 
 
 }
 
 form { 
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 40px;
   justify-content: center;
+  width: 600px;
+  padding: 30px;
+  margin: 0 auto;
+  
+  
 
 }
 
-button, input, select, textarea {
+form > * {
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+ input {
   font-family: inherit;
   font-size: 100%;
-  width : 150px;
+  width : 200px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
+  border: 1px solid #E5E7EB;
+  
 }
+
+input:focus {
+  border: 1px solid blue;
+  box-shadow: 0 3px 15px burlywood;
+}
+
+input[type="password"]::before {
+  border: 1px solid red;
+}
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #E5E7EB;
+  width: auto;
+  margin: 30px;
+}
+
