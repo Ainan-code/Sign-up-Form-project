@@ -7,51 +7,48 @@
 
 }
 body {
-  min-width: 100vh;
+
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: row;
+}
+
+.sidebar {
+  background-position: relative;
   background-image: url(./images/ayumi-kubo-mF2iY6pKa-8-unsplash.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#main {
-  display: grid;
-  grid-template-columns: repeat(2,1fr );
-  gap: .5rem;
-}
-
-.container {
+  width: 40vw;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.sidebar > h1 {
+  font-size: 64px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+
+}
+.content {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   gap: 15px;
   background-color: white;
   height: 100vh;
+  width: 60vw;
  
   
   
 }
-.sidebar {
-  
-  margin-bottom: 0;
-  max-width: 40vh;
-  
-}
 
-.logo {
-  @font-face {
-    font-family: 'updock', cursive;
-    src: url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
-  };
-  font-size: 64px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: antiquewhite;
-  display: flex;
-  justify-content: center;
 
-}
-
-.container > :first-child {
+.content > :first-child {
  text-align: center;
  font-weight: bold;
  background-color: aliceblue;
@@ -62,10 +59,11 @@ body {
 
 form { 
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   gap: 40px;
-  justify-content: center;
-  width: 600px;
+  align-items: space-between;
+  
+  width: auto;
   padding: 30px;
   margin: 0 auto;
   
@@ -73,15 +71,21 @@ form {
 
 }
 
-form > * {
-  display: inline-flex;
-  justify-content: space-evenly;
+form > .form_title {
+  align-self: flex-start;
 }
 
+ .field {
+  display: flex;
+  flex-flow: column wrap;
+  width : 40%;
+ }
+
  input {
+ 
   font-family: inherit;
   font-size: 100%;
-  width : 200px;
+  width: 200px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -99,15 +103,5 @@ input[type="password"]::before {
   border: 1px solid red;
 }
 
-.sign-in {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-  background-color: #E5E7EB;
-  width: auto;
-  margin: 30px;
-}
+
 

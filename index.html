@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign up Form</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
- <div id="main">
-    <div class="sidebar">  
-      <div class="logo">ODIN</div> 
+  <div class="sidebar">  
+      <h1 class="logo">ODIN</h1> 
     </div>
-    <div class="container">
-      <div id="first">This is not a real online service! You know you need something 
+  <div class="content">
+      <div id="dummy-text">This is not a real online service! You know you need something 
          like this in your life to help you realize your deepest dreams. <br>
      Sign up now to get started.
     <br>
@@ -22,53 +22,51 @@
      </div>
 
       <form action="#" method="post">
-        <legend>Lets do this! </legend>
-        <div class="namedetail">
-          <div>
+        <legend class="form_title">Lets do this! </legend>
+       
+        <div class="field">
            <label for="FirstName">First Name</label>
            <input type="text" id="FirstName">
           </div>
-          <div> 
+          
+          <div class="field"> 
            <label for="LastName">LastName</label>
            <input type="text" id="LastName">
          </div> 
-      </div>
-     
-        <div>
-          <div>
+      
+        <div class="field">
            <label for="useremail">Email adress</label>
            <input type="email" id="useremail" placeholder="you@email.com">
         </div>
-         <div>
+         
+        <div class="field">
            <label for="Phonenumber">Phone number</label>
            <input type="tel" id="Phonenumber">
          </div>
-        </div>
-        <div> 
-          <div> 
+       
+        <div class="field"> 
             <label for="password">PASSWORD</label>
             <input type="password" id="password">
           </div>
-          <div>
+          
+          <div class="field">
             <label for="confirm-password"> CONFIRM PASSWORD</label>
             <input type="password" id="confirm-password">
           </div>
-        </div>  
-        </form>
-      <div>
-        <div class="sign-in">
+          
           <div>
             <label for="submit"></label>
             <button type="submit" value="Sign in">Sign in</button>
-          </div>
-          <div>
-          Already have an account? Log in
-          </div>
-      </div>
-      
-    </div>
+        
+          </div>  
+        </form>
+        <div class="sign-in">
+          <p> Already have an account? </p> <a href="#">Log in</a>
+     </div>
+  <div>
+    
 
-  </div>
+  
 
 
 
